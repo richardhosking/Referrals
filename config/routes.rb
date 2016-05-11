@@ -16,17 +16,21 @@ Referrals::Application.routes.draw do
 
   get "sessions/create"
   get "sessions/destroy"
+  
   resources :users
-  resources :referrals
+  resources :clients
   resources :clinics
-  resources :clinicians
+  resources :referees
+  resources :referals
+  resources :referrers
+  
+  get "users/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   # You can have the root of your site routed with "root"
-  #root 'admin#index', as: 'admin'
-  # ...
+  root 'users#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -57,9 +61,7 @@ Referrals::Application.routes.draw do
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
-  #     res
- 
-  #endources :comments
+  #     resources :comments
   #     resources :sales do
   #       get 'recent', on: :collection
   #     end

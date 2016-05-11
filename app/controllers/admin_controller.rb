@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
   def index
-    @total_orders = Order.count  
+    
+    @total_referrals = Referral.count  
   end
 end
