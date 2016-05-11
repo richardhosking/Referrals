@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client urn:</strong>
+  <%= @referral.urn %>
+</p>
+
+<p>
+  <strong>Clinic:</strong>
+  <%= @referral.clinic %>
+</p>
+
+<p>
+  <strong>Referrer:</strong>
+  <%= @referral.referrer %>
+</p>
+
+<p>
+  <strong>Referee:</strong>
+  <%= @referral.referee %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @referral.status %>
+</p>
+
+<p>
+  <strong>Urgency:</strong>
+  <%= @referral.urgency %>
+</p>
+
+<%= link_to 'Edit', edit_referral_path(@referral) %>  |
+<%= link_to 'Back', referrals_path %><br><br>
+
+<%= link_to 'Referral Letter', referral_path(@referral.filename) %>

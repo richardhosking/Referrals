@@ -1,0 +1,18 @@
+<h3> Referrals Search </h3>
+
+<h4> Search by URN, clinic or referrer </h4>
+<%= form_tag referrals_path, :method =>'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+   </p>
+   <p>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+
+<%= form_tag referrals_path, :method =>'get' do %>
+  <p>
+    <%= submit_tag "Show all", :name => nil %>
+  </p>
+<% end %>

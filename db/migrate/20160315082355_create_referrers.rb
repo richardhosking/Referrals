@@ -1,0 +1,13 @@
+class CreateReferrers < ActiveRecord::Migration
+  def change
+    create_table :referrers do |t|
+      t.string :name, limit: 30
+      t.string :phone, limit: 10
+      t.string :FAX, limit: 10
+      t.string :email, limit: 30
+      t.string :provider_number, limit: 10
+
+      t.timestamps null: false
+    end
+  end
+end

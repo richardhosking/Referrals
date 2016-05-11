@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Referrals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client URN</th>
+      <th>Clinic</th>
+      <th>Referrer</th>
+      <th>Referee</th>
+      <th>Filename</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+   <% if @referrals.present? %>
+   
+    <% @referrals.each do |referral| %>
+      <tr>
+        <td><%= referral.urn %></td>
+        <td><%= referral.clinic %></td>
+        <td><%= referral.referrer %></td>
+        <td><%= referral.referee %></td>
+        <td><%= referral.filename %></td>
+        <td><%= link_to 'Show', referral %></td>
+        <td><%= link_to 'Edit', edit_referral_path(referral) %></td>
+        <td><%= link_to 'Destroy', referral, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <% else %>
+      <p> There are no posts containing <%= params[:search] %> </p>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Referral', new_referral_path %>
+
+<%= render 'search' %>

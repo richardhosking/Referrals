@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @referrer.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @referrer.phone %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @referrer.FAX %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @referrer.email %>
+</p>
+
+<p>
+  <strong>Provider number:</strong>
+  <%= @referrer.provider_number %>
+</p>
+
+<%= link_to 'Edit', edit_referrer_path(@referrer) %> |
+<%= link_to 'Back', referrers_path %>
