@@ -1,0 +1,103 @@
+richard@oliver-PC:~/Desktop/programming/demo$ echo "Subject: sendmail test" | sendmail -v richardh@iinet.net.au
+WARNING: local host name (oliver-PC) is not qualified; see cf/README: WHO AM I?
+richardh@iinet.net.au... Connecting to [127.0.0.1] via relay...
+220 oliver-PC ESMTP Sendmail 8.14.4/8.14.4/Debian-4.1ubuntu1; Tue, 27 Sep 2016 16:57:12 +0930; (No UCE/UBE) logging access from: localhost(OK)-localhost [127.0.0.1]
+>>> EHLO oliver-PC
+250-oliver-PC Hello localhost [127.0.0.1], pleased to meet you
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-EXPN
+250-VERB
+250-8BITMIME
+250-SIZE
+250-DSN
+250-ETRN
+250-AUTH DIGEST-MD5 CRAM-MD5
+250-DELIVERBY
+250 HELP
+>>> VERB
+250 2.0.0 Verbose mode
+>>> MAIL From:<richard@oliver-PC> SIZE=23 AUTH=richard@oliver-PC
+250 2.1.0 <richard@oliver-PC>... Sender ok
+>>> RCPT To:<richardh@iinet.net.au>
+>>> DATA
+250 2.1.5 <richardh@iinet.net.au>... Recipient ok
+354 Enter mail, end with "." on a line by itself
+>>> .
+050 <richardh@iinet.net.au>... Connecting to as-av.iinet.net.au. via esmtp...
+050 554-icp-osb-irony-in3.iinet.net.au
+050 554 Your access to this mail system from 1.125.15.186 has been rejected due to the sending MTA's poor reputation. If you believe that this failure is in error, please contact the intended recipient via alternate means.
+050 >>> QUIT
+050 <richard@oliver-PC>... Connecting to local...
+050 <richard@oliver-PC>... Sent
+250 2.0.0 u8R7RCKf010081 Message accepted for delivery
+richardh@iinet.net.au... Sent (u8R7RCKf010081 Message accepted for delivery)
+Closing connection to [127.0.0.1]
+>>> QUIT
+221 2.0.0 oliver-PC closing connection
+richard@oliver-PC:~/Desktop/programming/demo$ echo "Subject: sendmail test" | sendmail -v oliver.richard.hosking@gmail.com
+WARNING: local host name (oliver-PC) is not qualified; see cf/README: WHO AM I?
+oliver.richard.hosking@gmail.com... Connecting to [127.0.0.1] via relay...
+220 oliver-PC ESMTP Sendmail 8.14.4/8.14.4/Debian-4.1ubuntu1; Tue, 27 Sep 2016 17:00:50 +0930; (No UCE/UBE) logging access from: localhost(OK)-localhost [127.0.0.1]
+>>> EHLO oliver-PC
+250-oliver-PC Hello localhost [127.0.0.1], pleased to meet you
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-EXPN
+250-VERB
+250-8BITMIME
+250-SIZE
+250-DSN
+250-ETRN
+250-AUTH DIGEST-MD5 CRAM-MD5
+250-DELIVERBY
+250 HELP
+>>> VERB
+250 2.0.0 Verbose mode
+>>> MAIL From:<richard@oliver-PC> SIZE=23 AUTH=richard@oliver-PC
+250 2.1.0 <richard@oliver-PC>... Sender ok
+>>> RCPT To:<oliver.richard.hosking@gmail.com>
+>>> DATA
+250 2.1.5 <oliver.richard.hosking@gmail.com>... Recipient ok
+354 Enter mail, end with "." on a line by itself
+>>> .
+050 <oliver.richard.hosking@gmail.com>... Connecting to gmail-smtp-in.l.google.com. via esmtp...
+050 220 mx.google.com ESMTP o74si2140165ioe.165 - gsmtp
+050 >>> EHLO oliver-PC
+050 250-mx.google.com at your service, [1.125.15.219]
+050 250-SIZE 157286400
+050 250-8BITMIME
+050 250-STARTTLS
+050 250-ENHANCEDSTATUSCODES
+050 250-PIPELINING
+050 250-CHUNKING
+050 250 SMTPUTF8
+050 >>> STARTTLS
+050 220 2.0.0 Ready to start TLS
+050 >>> EHLO oliver-PC
+050 250-mx.google.com at your service, [1.125.15.219]
+050 250-SIZE 157286400
+050 250-8BITMIME
+050 250-ENHANCEDSTATUSCODES
+050 250-PIPELINING
+050 250-CHUNKING
+050 250 SMTPUTF8
+050 >>> MAIL From:<richard@oliver-PC> SIZE=309
+050 250 2.1.0 OK o74si2140165ioe.165 - gsmtp
+050 >>> RCPT To:<oliver.richard.hosking@gmail.com>
+050 >>> DATA
+050 250 2.1.5 OK o74si2140165ioe.165 - gsmtp
+050 354  Go ahead o74si2140165ioe.165 - gsmtp
+050 >>> .
+050 550-5.7.1 [1.125.15.219] The IP you're using to send mail is not authorized to
+050 550-5.7.1 send email directly to our servers. Please use the SMTP relay at your
+050 550-5.7.1 service provider instead. Learn more at
+050 550 5.7.1  https://support.google.com/mail/?p=NotAuthorizedError o74si2140165ioe.165 - gsmtp
+050 <richard@oliver-PC>... Connecting to local...
+050 <richard@oliver-PC>... Sent
+250 2.0.0 u8R7Uobw010147 Message accepted for delivery
+oliver.richard.hosking@gmail.com... Sent (u8R7Uobw010147 Message accepted for delivery)
+Closing connection to [127.0.0.1]
+>>> QUIT
+221 2.0.0 oliver-PC closing connection
+richard@oliver-PC:~/Desktop/programming/demo$ 

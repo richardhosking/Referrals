@@ -1,5 +1,7 @@
-<h1>Welcome Admin</h1>
-<br>
-Its <%= Time.now %><br>
-We have <%= pluralize(@total_referrals, "referral") %>
+<h1>Welcome <%= User.find_by(id: session[:user_id]).name %></h1><br>
 
+Its <%= Time.now %><br>
+
+We have <%= pluralize(@total_referrals, "referral") %><br>
+
+<%= link_to 'Referrals', referrals_path %>

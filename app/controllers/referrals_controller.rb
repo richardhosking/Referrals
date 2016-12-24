@@ -1,6 +1,8 @@
-class ReferralsController < ApplicationController
+   class ReferralsController < ApplicationController
+     
   before_action :set_referral, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :authorize, only: [:new, :create]
+  
   # GET /referrals
   # GET /referrals.json
   def index

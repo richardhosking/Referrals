@@ -1,4 +1,4 @@
-# Seed data 
+# Seed data for database
 # previous data will be deleted 
 
 Client.delete_all
